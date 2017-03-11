@@ -1,24 +1,21 @@
-#include <cstdio>
-#include <algorithm>
-
+#include<bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int T,N,ans;
-    
-    scanf("%d",&T);
-    
-    for(int tc = 1;tc <= T;++tc){
-        scanf("%d",&N);
-        ans = 0;
-        
-        for(int i = 0,x;i < N;++i){
-            scanf("%d",&x);
-            ans = max(ans,x);
-        }
-        
-        printf("Case %d: %d\n",tc,ans);
+int main()
+{
+    int t;
+    cin>>t;
+    for(int tt=1; tt<=t; tt++)
+    {
+        int n, xx[10000];
+        cin>>n;
+
+        for(int i=0; i<n; i++)
+            cin>>xx[i];
+
+        sort(xx, xx+n);
+
+        cout<<"Case "<<tt<<": "<<xx[n-1]<<endl;
     }
-    
     return 0;
 }
